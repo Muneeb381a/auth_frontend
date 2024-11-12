@@ -14,6 +14,8 @@ const Home = () => {
     }
 
     const fetchUserData = async () => {
+      const token = localStorage.getItem("token");
+
       const response = await fetch("http://localhost:3000/api/auth/profile", {
         method: "GET",
         headers: {
